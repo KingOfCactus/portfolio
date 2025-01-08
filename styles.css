@@ -1,0 +1,14 @@
+section {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.carousel-inner {
+    margin: auto;
+}
+.avatar {
+    vertical-align: middle;
+    width: 15%;
+    border: 0.5rem solid black;
+    border-radius: 50%;
+}
