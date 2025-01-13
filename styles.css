@@ -3,6 +3,10 @@ section {
     vertical-align: middle;
 }
 
+.card .row {
+    margin-top: auto;
+}
+
 .carousel-inner {
     margin: auto;
 }
