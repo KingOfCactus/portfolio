@@ -1,3 +1,41 @@
+.card {
+    text-decoration: none; 
+}
+
+.card .row {
+    margin-top: auto;
+}
+
+.card img {
+    object-fit: inherit;
+}
+
+.card video {
+    object-fit: inherit;
+}
+
+.carousel-control-next, .carousel-control-prev{
+    height: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#highlights .card {
+    width: 25rem; 
+    height: 100%;
+}
+
+#highlights .carousel {
+    width: 100%;
+    height: 15rem;
+}
+
+#highlights .carousel-item {
+    height: 15rem;
+    object-fit: cover;
+    background-color: black;
+}
+
 .logo:hover {
     width: 40%;
 }
@@ -7,22 +45,13 @@ section {
     vertical-align: middle;
 }
 
-.card .image {
-    object-fit: cover;
-}
-
 .hide-on-hover:hover {
     object-fit: cover;
     opacity: 0;
 
 }
-.card .row {
-    margin-top: auto;
-}
 
-.carousel-inner {
-    margin: auto;
-}
+
 .avatar {
     vertical-align: middle;
     width: 15%;
