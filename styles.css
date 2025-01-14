@@ -75,18 +75,18 @@ h2 {
 {
     border-radius: 50px;
     overflow: hidden;
-    transition: 1s ease-in-out;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transition: 0.5s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .card:hover
 {
-    --target-y: -0.9rem;
-    --target-shadow-color: rgba(0, 0, 255, .2);
+    --target-y: -0.8rem;
+    --target-shadow-color: rgba(0, 0, 0, .2);
 
-    --target-shadow-h-offset: 20px;
-    --target-shadow-v-offset: 20px;
-    --target-shadow-blur: 10px;
+    --target-shadow-h-offset: 7px;
+    --target-shadow-v-offset: 7px;
+    --target-shadow-blur: 2px;
     --target-shadow-spread: 1px;
 
     transform: translateY(var(--target-y));
@@ -104,24 +104,25 @@ h2 {
 	}
 
 	27.5% {
+        /* If I use this variable in the calc(), the keyframe isn't interpolated on Google Chrome :D */
         --ease: 1.2783;
 
-		transform: translateY(calc(var(--target-y) * var(--ease)));
-        box-shadow: calc(var(--target-shadow-h-offset) * var(--ease))
-                    calc(var(--target-shadow-v-offset) * var(--ease))
-                    calc(var(--target-shadow-blur) * var(--ease))
-                    calc(var(--target-shadow-spread) * var(--ease))
+		transform: translateY(calc(var(--target-y) * 1.2783));
+        box-shadow: calc(var(--target-shadow-h-offset) * 1.2783)
+                    calc(var(--target-shadow-v-offset) * 1.2783)
+                    calc(var(--target-shadow-blur) * 1.2783)
+                    calc(var(--target-shadow-spread) * 1.2783)
                     var(--target-shadow-color);
 	}
 
 	47.5% {
         --ease: 0.8522;
 
-		transform: translateY(calc(var(--target-y) * var(--ease)));
-        box-shadow: calc(var(--target-shadow-h-offset) * var(--ease))
-                    calc(var(--target-shadow-v-offset) * var(--ease))
-                    calc(var(--target-shadow-blur) * var(--ease))
-                    calc(var(--target-shadow-spread) * var(--ease))
+		transform: translateY(calc(var(--target-y) * 0.8522));
+        box-shadow: calc(var(--target-shadow-h-offset) * 0.8522)
+                    calc(var(--target-shadow-v-offset) * 0.8522)
+                    calc(var(--target-shadow-blur) * 0.8522)
+                    calc(var(--target-shadow-spread) * 0.8522)
                     var(--target-shadow-color);
 
 	}
@@ -129,11 +130,11 @@ h2 {
 	75% {
         --ease: 1.0285;
 
-		transform: translateY(calc(var(--target-y) * var(--ease)));
-        box-shadow: calc(var(--target-shadow-h-offset) * var(--ease))
-                    calc(var(--target-shadow-v-offset) * var(--ease))
-                    calc(var(--target-shadow-blur) * var(--ease))
-                    calc(var(--target-shadow-spread) * var(--ease))
+		transform: translateY(calc(var(--target-y) * 1.0285));
+        box-shadow: calc(var(--target-shadow-h-offset) * 1.0285)
+                    calc(var(--target-shadow-v-offset) * 1.0285)
+                    calc(var(--target-shadow-blur) * 1.0285)
+                    calc(var(--target-shadow-spread) * 1.0285)
                     var(--target-shadow-color);
 	}
 
