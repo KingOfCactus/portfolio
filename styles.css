@@ -63,3 +63,84 @@ h2 {
     object-fit: cover;
     background-color: black;
 }
+
+.col-md-3:hover
+{
+    transition-delay: 100ms;
+    transform: rotate(15deg);
+}
+
+
+.card
+{
+    border-radius: 50px;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.card:hover
+{
+    --target-y: -0.9rem;
+    --target-shadow-color: rgba(0, 0, 255, .2);
+
+    --target-shadow-h-offset: 20px;
+    --target-shadow-v-offset: 20px;
+    --target-shadow-blur: 10px;
+    --target-shadow-spread: 1px;
+
+    transform: translateY(var(--target-y));
+    box-shadow: var(--target-shadow-h-offset) var(--target-shadow-v-offset) 
+                var(--target-shadow-blur) var(--target-shadow-spread) 
+                var(--target-shadow-color);    
+    
+    animation: card-easeOutElastic 0.8s;
+}
+
+
+@keyframes card-easeOutElastic {
+    0% {
+		transform: translateY(0%);
+	}
+
+	27.5% {
+        --ease: 1.2783;
+
+		transform: translateY(calc(var(--target-y) * var(--ease)));
+        box-shadow: calc(var(--target-shadow-h-offset) * var(--ease))
+                    calc(var(--target-shadow-v-offset) * var(--ease))
+                    calc(var(--target-shadow-blur) * var(--ease))
+                    calc(var(--target-shadow-spread) * var(--ease))
+                    var(--target-shadow-color);
+	}
+
+	47.5% {
+        --ease: 0.8522;
+
+		transform: translateY(calc(var(--target-y) * var(--ease)));
+        box-shadow: calc(var(--target-shadow-h-offset) * var(--ease))
+                    calc(var(--target-shadow-v-offset) * var(--ease))
+                    calc(var(--target-shadow-blur) * var(--ease))
+                    calc(var(--target-shadow-spread) * var(--ease))
+                    var(--target-shadow-color);
+
+	}
+
+	75% {
+        --ease: 1.0285;
+
+		transform: translateY(calc(var(--target-y) * var(--ease)));
+        box-shadow: calc(var(--target-shadow-h-offset) * var(--ease))
+                    calc(var(--target-shadow-v-offset) * var(--ease))
+                    calc(var(--target-shadow-blur) * var(--ease))
+                    calc(var(--target-shadow-spread) * var(--ease))
+                    var(--target-shadow-color);
+	}
+
+	100% {
+        transform: translateY(var(--target-y));
+        box-shadow: var(--target-shadow-h-offset) var(--target-shadow-v-offset) 
+                    var(--target-shadow-blur) var(--target-shadow-spread) 
+                    var(--target-shadow-color);    
+	}
+}
