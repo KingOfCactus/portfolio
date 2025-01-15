@@ -83,6 +83,14 @@ h2 {
     object-fit: cover;
 }
 
+#others {
+    padding-bottom: 5rem;
+}
+
+#others h4 {
+    padding-bottom: 1rem;
+}
+
 .col-md-3:hover
 {
     transition-delay: 100ms;
