@@ -5,9 +5,17 @@ body
 
 .avatar {
     vertical-align: middle;
-    width: 15%;
+    max-width: 30%;
     border: 0.5rem solid black;
     border-radius: 50%;
+}
+
+#about-me h2 {
+    padding-bottom: 0.5rem;
+}
+
+#about-me h4 {
+    padding-bottom: 1rem;
 }
 
 section {
@@ -16,6 +24,7 @@ section {
 }
 
 h2 {
+    padding-top: 1rem;
     padding-bottom: 3rem;
 }
 
@@ -26,9 +35,8 @@ h2 {
 .card
 {
     text-decoration: none; 
-    width: 25rem; 
-    height: 30rem !important;
-
+    max-width: 25rem; 
+    height: 100% !important;
     border-radius: 50px;
     overflow: hidden;
 }
@@ -73,11 +81,6 @@ h2 {
 .carousel-item {
     height: 15rem;
     object-fit: cover;
-}
-
-#highlights .card
-{
-    height: 100% !important;
 }
 
 .col-md-3:hover
